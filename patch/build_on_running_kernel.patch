@@ -11,8 +11,8 @@ index a683d6f..bab13df 100644
 +LINUXSRC := /lib/modules/$(KVERSION)/build
  
  default:
--       $(MAKE) -C $(LINUXSRC) ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- M=$(PWD)
-+       $(MAKE) -C $(LINUXSRC) M=$(PWD)
+-	$(MAKE) -C $(LINUXSRC) ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- M=$(PWD)
++	$(MAKE) -C $(LINUXSRC) M=$(PWD)
  
  endif
-
+ 
